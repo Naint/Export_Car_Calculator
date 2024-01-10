@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="textStyleBase">
+        <!--<item name="background">@drawable/edit_text_style</item>-->
+        <item name="android:textSize">22sp</item>
+        <item name="fontFamily">@font/days_one</item>
+
+    </style>
+
+
+</resources>

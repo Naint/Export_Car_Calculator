@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Japan Cars</string>
+    <string name="calculator">Калькулятор</string>
+    <string name="statistic">Статистика</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="calculate_price_car">Расчёт стоимости авто</string>
+</resources>
