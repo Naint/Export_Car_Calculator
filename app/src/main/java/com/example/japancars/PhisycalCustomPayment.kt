@@ -2,7 +2,7 @@ package com.example.japancars
 
 class PhisycalCustomPayment : CustomsPayment()
 {
-    private var euroRate : Double = 97.87
+    private var euroRate : Double = 96.38
 
     override fun calculatePaymentLessThree(capacity: Int): Double {
         return 0.0
