@@ -1,30 +1,18 @@
 package com.example.japancars.screens.japan
 
 import android.app.AlertDialog
-import android.app.DownloadManager
-import android.content.BroadcastReceiver
-import android.content.Context
-import android.content.Intent
-import android.content.IntentFilter
-import android.net.Uri
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.EditText
-import android.widget.Toast
-import androidx.core.content.ContextCompat
-import androidx.core.content.ContextCompat.registerReceiver
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import com.example.japancars.PhisycalCustomPayment
 import com.example.japancars.R
 import com.example.japancars.databinding.FragmentJapanCalculatorBinding
-import com.example.japancars.model.ExchangeRate
 import com.example.japancars.screens.ExchangeRateViewModel
-import retrofit2.Retrofit
-import retrofit2.converter.gson.GsonConverterFactory
-import retrofit2.create
 import java.util.Locale
 import kotlin.math.roundToInt
 
@@ -41,6 +29,7 @@ class JapanCalculatorFragment : Fragment() {
 
     private lateinit var japanCalcViewModel: JapanCalcViewModel
     private lateinit var exchangeRateViewModel: ExchangeRateViewModel
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
@@ -62,8 +51,12 @@ class JapanCalculatorFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.calculateButton.setOnClickListener{
+        exchangeRateViewModel.getWeb()
 
+        var c = PhisycalCustomPayment()
+        Log.i("SS", c.calculatePaymentLessThree(2406000, 0.63, 91.0).toString())
+
+        binding.calculateButton.setOnClickListener{
 
 
 
@@ -75,6 +68,7 @@ class JapanCalculatorFragment : Fragment() {
     }
 
 
+
     private fun showPriceDialog(){
         val builder = AlertDialog.Builder(requireContext())
         val customView = LayoutInflater.from(requireContext()).inflate(R.layout.price_dialog, null)
@@ -84,11 +78,21 @@ class JapanCalculatorFragment : Fragment() {
         val customPriceEditText = customView.findViewById<EditText>(R.id.customPriceED)
         val totalPriceEditText = customView.findViewById<EditText>(R.id.totalPriceED)
 
+        /*Костыль для работы кода
+        * Нужно вынести инициализацию VM вверх
+        * */
+        japanCalcViewModel.setCarPrice(binding.carPriceYenET.text.toString().toInt())
 
+        Log.i("carPrice", binding.carPriceYenET.text.toString())
+        val customPayment = japanCalcViewModel.getCustomPrice(getYearRadioButton(),
+            binding.engineCapacityED.text.toString().toInt(),
+            japanCalcViewModel.carPriceYenLiveData.value!!.toInt(),
+            exchangeRateViewModel.getYenRate(),
+            exchangeRateViewModel.getEuroRate())
 
-        val customPayment = japanCalcViewModel.getCustomPrice(getYearRadioButton(), binding.engineCapacityED.text.toString().toInt())
+        Log.i("CARCARCAR", customPayment.toString())
 
-        japanCalcViewModel.init(binding.carPriceYenET.text.toString().toInt(), customPayment)
+        japanCalcViewModel.init(customPayment)
         japanCalcViewModel.carPriceYenLiveData.observe(viewLifecycleOwner) {
             try{
                 val formInfo = String.format(Locale.GERMANY, "%,d", it.toString().toInt())
@@ -103,7 +107,7 @@ class JapanCalculatorFragment : Fragment() {
         japanCalcViewModel.customPaymentLiveData.observe(viewLifecycleOwner) {
             try{
                 val formInfo = String.format(Locale.GERMANY, "%,d", it.roundToInt().toString().toInt())
-                customPriceEditText.setText("${formInfo}¥")
+                customPriceEditText.setText("$formInfo ¥")
             }
             catch (_: Exception){
 
@@ -111,9 +115,9 @@ class JapanCalculatorFragment : Fragment() {
         }
 
 
-        var buff1: String = japanCalcViewModel.calculateFinalPrice().roundToInt().toString()
+        var buff1: String = japanCalcViewModel.calculateFinalPrice(exchangeRateViewModel.getYenRate()).roundToInt().toString()
         val buffEdit1 = String.format(Locale.GERMANY, "%,d", buff1.toInt())
-        totalPriceEditText.setText("${buffEdit1} ₽")
+        totalPriceEditText.setText("$buffEdit1 ₽")
 
 
         val dialog = builder.create()

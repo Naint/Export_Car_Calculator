@@ -1,27 +1,53 @@
 package com.example.japancars.screens
 
 import android.app.Application
+import android.util.Log
 import androidx.lifecycle.AndroidViewModel
-import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-
-import com.example.japancars.data.repository.ExchangeRateRepository
-import com.example.japancars.model.ExchangeRate
-import com.example.japancars.model.ExchangeRateItem
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
-import retrofit2.Response
+import org.jsoup.Jsoup
+import org.jsoup.select.Elements
 
 
 class ExchangeRateViewModel(application: Application): AndroidViewModel(application) {
 
-    var repo = ExchangeRateRepository()
-    val myRateList: MutableLiveData<Response<ExchangeRate>> = MutableLiveData()
+    private var yenRate: Double = 0.0
+    private var euroRate: Double = 0.0
 
-    fun getActualRate(){
-        viewModelScope.launch {
-            myRateList.value = repo.getActualRate()
+    fun getWeb(){
+        viewModelScope.launch(Dispatchers.IO) {
+            val doc = Jsoup.connect("https://www.atb.su/services/transfer/transfer-bank/").get()
+            val sections = doc.getElementsByTag("section")
+            val element_sections = sections[2]
+            var div_elements = element_sections.children()
+            Log.i("doc", doc.title())
+
+            var s = doc.getElementById("currencyTab1").text().toString().split(" ")
+
+            Log.i("section", doc.getElementById("currencyTab1").text().toString())
+            Log.i("euro", s[9])
+            Log.i("yen", s[18])
+            setEuroRate(s[9].toDouble())
+            setYenRate(s[18].toDouble())
+
         }
     }
+
+    private fun setEuroRate(eR: Double){
+        euroRate = eR
+    }
+    private fun setYenRate(yR: Double){
+        yenRate = yR
+    }
+
+    fun getEuroRate(): Double{
+        return euroRate
+    }
+
+    fun getYenRate(): Double{
+        return yenRate
+    }
+
 
 }

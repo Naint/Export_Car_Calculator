@@ -53,14 +53,17 @@ dependencies {
     //coroutines
     implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.1")
     implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.1")
+
     //liveData
     implementation ("androidx.lifecycle:lifecycle-livedata-ktx:2.7.0")
 
+    //Jsoup
+    implementation ("org.jsoup:jsoup:1.13.1")
 
+    //JUnit
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
+
+    //Espresso
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
-
-
-
 }
