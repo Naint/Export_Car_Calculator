@@ -15,9 +15,7 @@ class PhysicalCustomPaymentTest {
     private val pcm = PhisycalCustomPayment()
 
     @Test
-    fun addition_isCorrect() {
-
-        //assertEquals(4, pcm.calculatePaymentThreeToFive(1500))
-        //надо дописывать в этот метод курс евро, иначе не тестируеый код
+    fun whenAdding1500And93_thenAnswer237150() {
+        assertEquals(237150, pcm.calculatePaymentThreeToFive(1500, 93.0).toInt())
     }
 }

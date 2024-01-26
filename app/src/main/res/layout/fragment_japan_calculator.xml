@@ -37,6 +37,7 @@
             android:hint="Стоимость авто в йенах"
             android:textColor="@color/white"
             android:textColorHint="@color/white"
+            android:inputType="number"
             android:fontFamily="@font/days_one" />
 
         <RadioGroup
@@ -83,6 +84,7 @@
             android:hint="Объём двигателя"
             android:inputType="number"
             android:fontFamily="@font/days_one"
+            android:textColor="@color/white"
             android:textColorHint="@color/white"
             />
         <Button
@@ -94,6 +96,7 @@
             android:textSize="18sp"
             android:backgroundTint="#008000"
             android:textColor="@color/white"
+            android:textColorHint="@color/white"
             android:fontFamily="@font/days_one"
             android:text="Раcсчитать"/>
     </LinearLayout>

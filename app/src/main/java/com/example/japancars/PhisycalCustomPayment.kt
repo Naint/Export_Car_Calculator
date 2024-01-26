@@ -7,7 +7,7 @@ class PhisycalCustomPayment : CustomsPayment()
 
     override fun calculatePaymentLessThree(carPrice: Int, yenRate: Double, euroRate: Double): Double {
 
-        var yenRateBuff = yenRate / 100
+        val yenRateBuff = yenRate / 100
         val carEuroPrice = carPrice * yenRateBuff / euroRate
         var percent = 0.0
         Log.i("infoRate", "${yenRateBuff} ${carPrice} ${euroRate}")

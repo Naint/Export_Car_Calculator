@@ -1,4 +1,4 @@
-package com.example.japancars.screens.japan
+package com.example.japancars.screens.Korea
 
 import android.app.Application
 import android.util.Log
@@ -6,29 +6,34 @@ import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
 import com.example.japancars.PhisycalCustomPayment
 
-class JapanCalcViewModel(application: Application): AndroidViewModel(application) {
+class KoreaCalcViewModel(application: Application): AndroidViewModel(application) {
 
-    private var customPayment = 0.0
-    var carPriceYenLiveData = MutableLiveData<Int>()
+
+    var carPriceVonLiveData = MutableLiveData<Int>()
     var customPaymentLiveData = MutableLiveData<Double>()
 
-    private var japanExpense = 100000
+    private var customPayment = 0.0
+    private var koreaExpense = 200000
     private var averageComission = 50000
-    private var freight = 450
-    private var expenseInRussia = 80000
+    private var freight = 80000
+    private var expenseInRussia = 100000
 
-
-    fun init(customPayment: Double, ){
+    fun setCustomPayment(customPayment: Double){
         customPaymentLiveData.value = customPayment
     }
 
     fun setCarPrice(carPrice: Int){
-        carPriceYenLiveData.value = carPrice
+        carPriceVonLiveData.value = carPrice
     }
 
-    fun calculateFinalPrice(yenRate: Double) : Double{
-        val buffYenRate = yenRate / 100
-        return getRublesPrice(carPriceYenLiveData.value!!.toInt(), buffYenRate) + japanExpense * buffYenRate + freight * 90 + averageComission + customPaymentLiveData.value!!.toDouble() + expenseInRussia
+
+
+    private fun getRublesPrice(von: Int, rate : Double): Double{
+        return von * rate
+    }
+
+    fun calculateFinalPrice(vonRate: Double) : Double{
+        return getRublesPrice(carPriceVonLiveData.value!!.toInt(), vonRate) + koreaExpense + freight + averageComission + customPaymentLiveData.value!!.toDouble() + expenseInRussia
     }
 
     fun getCustomPrice(age: Int, capacity: Int, carPrice: Int, yenRate: Double, euroRate: Double): Double{
@@ -53,10 +58,4 @@ class JapanCalcViewModel(application: Application): AndroidViewModel(application
         return price
 
     }
-
-
-    private fun getRublesPrice(jpy: Int, rate : Double): Double{
-        return jpy * rate
-    }
-
 }

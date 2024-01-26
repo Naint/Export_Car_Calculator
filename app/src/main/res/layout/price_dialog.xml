@@ -76,7 +76,7 @@
         <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:hint="40.000 - 70.000 ₽"
+            android:hint="50.000 ₽"
             android:textColor="@color/white"
             style="@style/textStyleBase"
             android:textColorHint="@color/lightGreen"
@@ -133,6 +133,7 @@
             />
 
         <Button
+            android:id="@+id/closePriceDialog"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/red"

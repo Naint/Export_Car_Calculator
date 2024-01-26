@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import com.example.japancars.databinding.ActivityMainBinding
+import com.example.japancars.screens.Korea.KoreaCalculatorFragment
 import com.example.japancars.screens.japan.JapanCalculatorFragment
 
 class MainActivity : AppCompatActivity() {
@@ -19,7 +20,7 @@ class MainActivity : AppCompatActivity() {
         binding.bottomNavigationView.setOnItemSelectedListener{
             when(it.itemId){
                 R.id.calculatorNavElement -> replaceFragment(JapanCalculatorFragment())
-
+                R.id.historyNavElement -> replaceFragment(KoreaCalculatorFragment())
                 else ->{
 
                 }
