@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:backgroundTint="@color/mainBackground"
+    app:cardCornerRadius="0dp"
+    app:cardBackgroundColor="@color/mainBackground"
+    app:cardPreventCornerOverlap="false"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/textStyleBase"
+            android:text="Цена авто в Японии: "
+            android:textColor="@color/white"
+            />
+
+        <EditText
+            android:id="@+id/carPriceInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="900.000 ¥"
+            style="@style/textStyleBase"
+            android:enabled="false"
+            android:textColor="#CCFF33"
+            android:textColorHint="#CCFF33"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Средние расходы по Японии:"
+            android:textColor="@color/white"
+            style="@style/textStyleBase"
+            android:textSize="18sp" />
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="150.000 ¥"
+            style="@style/textStyleBase"
+            android:textColor="@color/white"
+            android:textColorHint="@color/lightGreen"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Средний фрахт:"
+            android:textColor="@color/white"
+            style="@style/textStyleBase"
+            android:textSize="18sp" />
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="450 $"
+            style="@style/textStyleBase"
+            android:textColor="@color/white"
+            android:textColorHint="@color/lightGreen"
+
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Средняя комиссия компаний:"
+            style="@style/textStyleBase"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="50.000 ₽"
+            android:textColor="@color/white"
+            style="@style/textStyleBase"
+            android:textColorHint="@color/lightGreen"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Таможенный платеж:"
+            style="@style/textStyleBase"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+        <EditText
+            android:id="@+id/customPriceED"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="170.000₽"
+            style="@style/textStyleBase"
+            android:textColor="#CCFF33"
+            android:textColorHint="@color/lightGreen"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Средняя цена за оформление в РФ :"
+            style="@style/textStyleBase"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="80.000 ₽"
+            style="@style/textStyleBase"
+            android:textColor="@color/white"
+            android:textColorHint="@color/lightGreen"
+            android:layout_marginBottom="25dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Итоговая стоимость:"
+            style="@style/textStyleBase"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+
+            />
+        <EditText
+            android:id="@+id/totalPriceED"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="~ 1.100.000₽"
+            style="@style/textStyleBase"
+            android:textColor="@color/white"
+            android:textColorHint="@color/lightGreen"
+            />
+
+        <Button
+            android:id="@+id/closePriceDialog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/red"
+            android:text="@string/close"
+            style="@style/textStyleBase"
+            android:layout_marginTop="15dp"
+            android:layout_gravity="center"
+            />
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

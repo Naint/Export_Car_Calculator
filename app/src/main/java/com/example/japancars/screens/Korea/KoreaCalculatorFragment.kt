@@ -11,10 +11,16 @@ import android.widget.Button
 import android.widget.EditText
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.viewModelScope
 import com.example.japancars.R
 import com.example.japancars.databinding.FragmentJapanCalculatorBinding
 import com.example.japancars.databinding.FragmentKoreaCalculatorBinding
 import com.example.japancars.screens.ExchangeRateViewModel
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
+import org.jsoup.Jsoup
+import org.jsoup.select.Elements
 import java.util.Locale
 import kotlin.math.roundToInt
 
@@ -56,6 +62,8 @@ class KoreaCalculatorFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        //getInfoWeb()
+        exchangeRateViewModel.getRateInfo()
         binding.calculateButton.setOnClickListener{
             showPriceDialog()
         }
@@ -68,9 +76,28 @@ class KoreaCalculatorFragment : Fragment() {
         //Log.i("KoreaInfo", koreaCalcViewModel.calculateFinalPrice(0.066369).toString())
     }
 
+    private fun getInfoWeb(){
+
+        GlobalScope.launch {
+            val doc =
+                Jsoup.connect(
+                    "https://www.encar.com/dc/dc_cardetailview.do?pageid=dc_carsearch&listAdvType=pic&carid=36719772&view_type=hs_ad&wtClick_korList=015&advClickPosition=kor_pic_p1_g3")
+                .get()
+
+            val table = doc.select("div[class=area_image]")
+            Log.i("TABLE", table.toString())
+
+            /*val rateTable = doc.getElementById("currencyTab1").text().toString().split(" ")
+            Log.i("euro", rateTable[9])
+            Log.i("yen", rateTable[18])*/
+        }
+    }
+
+
+
     private fun showPriceDialog(){
         val builder = AlertDialog.Builder(requireContext())
-        val customView = LayoutInflater.from(requireContext()).inflate(R.layout.price_dialog, null)
+        val customView = LayoutInflater.from(requireContext()).inflate(R.layout.price_dialog_korea, null)
         builder.setView(customView)
 
         val carPriceEditText = customView.findViewById<EditText>(R.id.carPriceInfo)
@@ -89,10 +116,11 @@ class KoreaCalculatorFragment : Fragment() {
             val customPayment = koreaCalcViewModel.getCustomPrice(getYearRadioButton(),
                 binding.engineCapacityED.text.toString().toInt(),
                 koreaCalcViewModel.carPriceVonLiveData.value!!.toInt(),
-                0.066369,
+                exchangeRateViewModel.getYenRate(),
                 exchangeRateViewModel.getEuroRate())
 
             koreaCalcViewModel.setCustomPayment(customPayment)
+            Log.i("customPayment", customPayment.toString())
             koreaCalcViewModel.carPriceVonLiveData.observe(viewLifecycleOwner) {
                 try{
                     val formInfo = String.format(Locale.GERMANY, "%,d", it.toString().toInt())

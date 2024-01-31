@@ -39,15 +39,15 @@ class KoreaCalcViewModel(application: Application): AndroidViewModel(application
     fun getCustomPrice(age: Int, capacity: Int, carPrice: Int, yenRate: Double, euroRate: Double): Double{
         var price = 0.0
         var n = PhisycalCustomPayment()
-
+        Log.i("threeToFive", "${capacity} || ${euroRate}")
         if(age in 0..2){
 
             price = n.calculatePaymentLessThree(carPrice, yenRate, euroRate)
-            Log.i("carPriceLiveData", price.toString())
             customPayment = price
         }
         else if (age in 3..5){
             price = n.calculatePaymentThreeToFive(capacity, euroRate)
+
             customPayment = price
         }
         else if(age > 5){

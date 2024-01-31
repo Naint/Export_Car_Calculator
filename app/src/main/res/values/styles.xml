@@ -8,5 +8,11 @@
 
     </style>
 
+    <style name="editTextStyle">
+        <item name="android:textSize">22sp</item>
+        <item name="fontFamily">@font/days_one</item>
+
+    </style>
+
 
 </resources>
