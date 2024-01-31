@@ -3,10 +3,16 @@
 
     <item
         android:id="@+id/calculatorNavElement"
-        android:title="Япония"
+        android:title="@string/japan"
+        android:icon="@drawable/japan_icon_menu"
         />
     <item
         android:id="@+id/historyNavElement"
-        android:title="Корея"/>
+        android:title="@string/korea"
+        android:icon="@drawable/korea_icon_menu"/>
+    <item
+        android:id="@+id/otherNavElement"
+        android:title="@string/other"
+        android:icon="@drawable/ic_other_24"/>
 
 </menu>

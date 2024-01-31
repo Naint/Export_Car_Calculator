@@ -27,7 +27,6 @@ class ExchangeRateViewModel(application: Application): AndroidViewModel(applicat
         }
         catch (_ : Exception){
         }
-
     }
 
     private fun setEuroRate(eR: Double){

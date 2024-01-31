@@ -60,7 +60,7 @@ class JapanCalculatorFragment : Fragment() {
 
     private fun showPriceDialog(){
         val builder = AlertDialog.Builder(requireContext())
-        val customView = LayoutInflater.from(requireContext()).inflate(R.layout.price_dialog, null)
+        val customView = LayoutInflater.from(requireContext()).inflate(R.layout.price_dialog_japan, null)
         builder.setView(customView)
 
         val carPriceEditText = customView.findViewById<EditText>(R.id.carPriceInfo)
@@ -86,7 +86,7 @@ class JapanCalculatorFragment : Fragment() {
             japanCalcViewModel.carPriceYenLiveData.observe(viewLifecycleOwner) {
                 try{
                     val formInfo = String.format(Locale.GERMANY, "%,d", it.toString().toInt())
-                    carPriceEditText.setText("${formInfo}¥")
+                    carPriceEditText.setText("${formInfo} ¥")
 
                 }
                 catch (_: Exception){
