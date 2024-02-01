@@ -98,43 +98,7 @@
             android:fontFamily="@font/days_one"
             android:text="Раcсчитать"/>
 
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_marginTop="20dp"
-            android:background="@android:color/white" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Расчёт по ссылке на Encar"
-            android:textColor="@color/white"
-            android:fontFamily="@font/days_one"
-            android:textSize="18sp"
-            android:layout_marginTop="20dp"
-            android:layout_gravity="center"
-            />
-
-        <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:hint="Вставьте ссылку"
-            android:layout_gravity="center"
-            android:layout_marginTop="20dp"
-            android:textColorHint="@color/white"
-            android:fontFamily="@font/days_one"
-            />
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="15dp"
-            android:textSize="18sp"
-            android:backgroundTint="#008000"
-            android:textColor="@color/white"
-            android:fontFamily="@font/days_one"
-            android:text="Раcсчитать"/>
 
     </LinearLayout>
 

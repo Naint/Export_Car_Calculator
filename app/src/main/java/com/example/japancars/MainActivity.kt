@@ -21,7 +21,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        replaceFragment(JapanCalculatorFragment())
+        replaceFragment(OtherFragment())
+        //replaceFragment(JapanCalculatorFragment())
         initPermission()
         binding.bottomNavigationView.setOnItemSelectedListener{
             when(it.itemId){

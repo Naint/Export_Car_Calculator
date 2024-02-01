@@ -59,9 +59,30 @@
             android:layout_height="100dp"
             android:backgroundTint="#4b4d4b"
             android:layout_weight="1"
-            android:layout_marginRight="50dp"
-            app:cardCornerRadius="20dp"
-            >
+            android:layout_marginRight="30dp"
+            app:cardCornerRadius="20dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Дром"
+                    android:gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:layout_gravity="center"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/days_one"
+                    />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/drom_icon"
+                    />
+            </LinearLayout>
 
         </androidx.cardview.widget.CardView>
 
@@ -71,7 +92,60 @@
             android:backgroundTint="#4b4d4b"
             android:layout_weight="1"
             app:cardCornerRadius="20dp"
-            >
+            android:layout_marginRight="30dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Avito"
+                    android:gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:layout_gravity="center"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/days_one"
+                    />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/avito_icon"
+                    />
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:backgroundTint="#4b4d4b"
+            android:layout_weight="1"
+            app:cardCornerRadius="20dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Auto.ru"
+                    android:gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:layout_gravity="center"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/days_one"
+                    />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/autoru_icon"
+                    />
+            </LinearLayout>
 
         </androidx.cardview.widget.CardView>
 
