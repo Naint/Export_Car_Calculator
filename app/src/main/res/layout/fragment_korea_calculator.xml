@@ -77,6 +77,33 @@
                 android:text="Старше 7 лет" />
         </RadioGroup>
 
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            >
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Физ. лицо"
+                android:background="@drawable/radio_selector_calc_face"
+                android:textColor="@drawable/text_color_calc_face"
+                />
+            <RadioButton
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Юр. лицо"
+                android:textColor="@drawable/text_color_calc_face"
+                android:background="@drawable/radio_selector_calc_face"
+                />
+        </RadioGroup>
+
         <EditText
             android:id="@+id/engineCapacityED"
             android:layout_width="match_parent"
@@ -88,44 +115,6 @@
             />
         <Button
             android:id="@+id/calculateButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="15dp"
-            android:textSize="18sp"
-            android:backgroundTint="#008000"
-            android:textColor="@color/white"
-            android:fontFamily="@font/days_one"
-            android:text="Раcсчитать"/>
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_marginTop="20dp"
-            android:background="@android:color/white" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Расчёт по ссылке на Encar"
-            android:textColor="@color/white"
-            android:fontFamily="@font/days_one"
-            android:textSize="18sp"
-            android:layout_marginTop="20dp"
-            android:layout_gravity="center"
-            />
-
-        <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:hint="Вставьте ссылку"
-            android:layout_gravity="center"
-            android:layout_marginTop="20dp"
-            android:textColorHint="@color/white"
-            android:fontFamily="@font/days_one"
-            />
-
-        <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
