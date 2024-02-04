@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".screens.exchangeRate.ExchangeRatesFragment"
+    android:background="@color/mainBackground">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_margin="20dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Курс ЦБ"
+                android:fontFamily="@font/days_one"
+                android:textSize="30sp"
+                android:textColor="@color/white" />
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Доллар США"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/days_one"
+                    android:textColor="@color/white"
+                    android:layout_weight="1"
+                    android:layout_gravity="left"
+                    />
+
+                <TextView
+                    android:id="@+id/tvDollarRateCb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="92.02 P"
+                    android:fontFamily="@font/days_one"
+                    android:textSize="18sp"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:textColor="@color/white"
+                    />
+
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Евро"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/days_one"
+                    android:textColor="@color/white"
+                    android:layout_weight="1"
+                    android:layout_gravity="left"
+                    />
+
+                <TextView
+                    android:id="@+id/tvEuroRateCb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="92.02 P"
+                    android:fontFamily="@font/days_one"
+                    android:textSize="18sp"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:textColor="@color/white"
+                    />
+
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Японская Иена"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/days_one"
+                    android:textColor="@color/white"
+                    android:layout_weight="1"
+                    android:layout_gravity="left"
+                    />
+
+                <TextView
+                    android:id="@+id/tvYenRateCb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="92.02 P"
+                    android:fontFamily="@font/days_one"
+                    android:textSize="18sp"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:textColor="@color/white"
+                    />
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Корейский Вон"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/days_one"
+                    android:textColor="@color/white"
+                    android:layout_weight="1"
+                    android:layout_gravity="left"
+                    />
+
+                <TextView
+                    android:id="@+id/tvVonRateCb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="92.02 P"
+                    android:fontFamily="@font/days_one"
+                    android:textSize="18sp"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:textColor="@color/white"
+                    />
+
+
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SWIFT перевод(АТБ)"
+                android:textColor="@color/white"
+                android:textSize="25sp"
+                android:layout_marginTop="50dp"
+                android:fontFamily="@font/days_one"
+                />
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Доллар США"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/days_one"
+                    android:textColor="@color/white"
+                    android:layout_weight="1"
+                    android:layout_gravity="left"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="92.02 P"
+                    android:fontFamily="@font/days_one"
+                    android:textSize="18sp"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:textColor="@color/white"
+                    />
+
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Евро"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/days_one"
+                    android:textColor="@color/white"
+                    android:layout_weight="1"
+                    android:layout_gravity="left"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="92.02 P"
+                    android:fontFamily="@font/days_one"
+                    android:textSize="18sp"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:textColor="@color/white"
+                    />
+
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Японская Иена"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/days_one"
+                    android:textColor="@color/white"
+                    android:layout_weight="1"
+                    android:layout_gravity="left"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="92.02 P"
+                    android:fontFamily="@font/days_one"
+                    android:textSize="18sp"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:textColor="@color/white"
+                    />
+
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

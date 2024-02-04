@@ -90,6 +90,9 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Физ. лицо"
+                android:gravity="center"
+                android:fontFamily="@font/days_one"
+                android:button="@android:color/transparent"
                 android:background="@drawable/radio_selector_calc_face"
                 android:textColor="@drawable/text_color_calc_face"
                 />
@@ -99,6 +102,9 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Юр. лицо"
+                android:button="@android:color/transparent"
+                android:gravity="center"
+                android:fontFamily="@font/days_one"
                 android:textColor="@drawable/text_color_calc_face"
                 android:background="@drawable/radio_selector_calc_face"
                 />
@@ -123,7 +129,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="30dp"
             android:textSize="18sp"
             android:backgroundTint="#008000"
             android:textColor="@color/white"
