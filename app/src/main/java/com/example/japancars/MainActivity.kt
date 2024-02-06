@@ -21,22 +21,22 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        replaceFragment(OtherFragment())
-        //replaceFragment(JapanCalculatorFragment())
+
+        replaceFragment(JapanCalculatorFragment())
         initPermission()
+
         binding.bottomNavigationView.setOnItemSelectedListener{
             when(it.itemId){
                 R.id.calculatorNavElement -> replaceFragment(JapanCalculatorFragment())
                 R.id.historyNavElement -> replaceFragment(KoreaCalculatorFragment())
                 R.id.otherNavElement -> replaceFragment(OtherFragment())
                 else ->{
-
                 }
             }
-
             true
         }
     }
+
     fun initPermission(){
         if(checkPermission(USE_INTERNET, this, MainActivity())){
             Toast.makeText(this, "GRANTED", Toast.LENGTH_LONG).show()

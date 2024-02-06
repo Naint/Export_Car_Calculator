@@ -11,4 +11,12 @@
     <string name="japan">Япония</string>
     <string name="korea">Корея</string>
     <string name="other">Другое</string>
+    <string name="update">Обновить</string>
+    <string name="rate_cb">Курс ЦБ</string>
+    <string name="dollar_usa">Доллар США</string>
+    <string name="euro">Евро</string>
+    <string name="japan_yen">Японская Иена</string>
+    <string name="korea_von">Корейский Вон</string>
+    <string name="swift_transfer_atb">SWIFT перевод(АТБ)</string>
+    <string name="back">Назад</string>
 </resources>
