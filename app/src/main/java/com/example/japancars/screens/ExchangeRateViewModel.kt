@@ -6,6 +6,7 @@ import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 import org.jsoup.Jsoup
 
 
@@ -14,15 +15,13 @@ class ExchangeRateViewModel(application: Application): AndroidViewModel(applicat
     private var yenRate: Double = 0.0
     private var euroRate: Double = 0.0
 
-    private var yenRateSwift: Double = 0.0
-    private var dollarRateSwift: Double = 0.0
+    var yenRateSwift: Double = 0.0
+    var dollarRateSwift: Double = 0.0
 
-    public var euroRateCb: Double = 0.0
-    private var dollarRateCb: Double = 0.0
-    private var yenRateCb: Double = 0.0
-    private var vonRateCb: Double = 0.0
-
-
+    var euroRateCb: Double = 0.0
+    var dollarRateCb: Double = 0.0
+    var yenRateCb: Double = 0.0
+    var vonRateCb: Double = 0.0
 
     fun getRateInfo(){
         try{
@@ -31,6 +30,9 @@ class ExchangeRateViewModel(application: Application): AndroidViewModel(applicat
                 val rateTable = doc.getElementById("currencyTab1").text().toString().split(" ")
                 Log.i("euro", rateTable[9])
                 Log.i("yen", rateTable[18])
+                Log.i("dollar", rateTable[6])
+                dollarRateSwift = rateTable[6].toDouble()
+                yenRateSwift = rateTable[18].toDouble()
                 setEuroRate(rateTable[9].toDouble())
                 setYenRate(rateTable[18].toDouble())
             }
@@ -51,13 +53,13 @@ class ExchangeRateViewModel(application: Application): AndroidViewModel(applicat
                     .getElementsByTag("tr")[15]
                     .getElementsByTag("td")[4].text().replace(",", ".").toDouble()
                 yenRateCb = rateTable
-                    .getElementsByTag("tr")[40]
+                    .getElementsByTag("tr")[43]
                     .getElementsByTag("td")[4].text().replace(",", ".").toDouble()
                 vonRateCb = rateTable
                     .getElementsByTag("tr")[8]
-                    .getElementsByTag("td")[4].text().replace(",", ".").toDouble()
-
+                    .getElementsByTag("td")[4].text().replace(",", ".").toDouble() / 1000
             }
+
 
         }catch (_ : Exception){
 
@@ -68,6 +70,7 @@ class ExchangeRateViewModel(application: Application): AndroidViewModel(applicat
     private fun setEuroRate(eR: Double){
         euroRate = eR
     }
+
     private fun setYenRate(yR: Double){
         yenRate = yR
     }

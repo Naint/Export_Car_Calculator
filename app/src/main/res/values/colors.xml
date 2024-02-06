@@ -5,4 +5,5 @@
     <color name="mainBackground">#333333</color>
     <color name="lightGreen">#CCFF33</color>
     <color name="red">#412227</color>
+    <color name="lightGrey">#4b4d4b</color>
 </resources>
