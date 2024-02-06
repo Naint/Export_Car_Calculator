@@ -19,4 +19,25 @@
     <string name="korea_von">Корейский Вон</string>
     <string name="swift_transfer_atb">SWIFT перевод(АТБ)</string>
     <string name="back">Назад</string>
+    <string name="average_expense_in_korea">Средние расходы по Корее:</string>
+    <string name="average_freight">Средний фрахт:</string>
+    <string name="custom_payment">Таможенный платеж:</string>
+    <string name="average_price_for_registration_in_ru">Средняя цена за оформление в РФ :</string>
+    <string name="final_price">Итоговая стоимость:</string>
+    <string name="car_price_in_japan">Цена авто в Японии:</string>
+    <string name="average_expense_in_japan">Средние расходы по Японии:</string>
+    <string name="calculate_car_from_japan">Расчёт авто из Японии</string>
+    <string name="car_price_yen">Стоимость авто в йенах</string>
+    <string name="capacity_engine">Объём двигателя</string>
+    <string name="calculate">Раcсчитать</string>
+    <string name="less_three_years">Младше 3 лет</string>
+    <string name="three_to_five_years">От 3 до 5 лет</string>
+    <string name="five_to_seven_years">От 5 до 7 лет</string>
+    <string name="more_seven">Старше 7 лет</string>
+    <string name="individual">Физ. лицо</string>
+    <string name="legal_entity">Юр. лицо</string>
+    <string name="calculate_price_from_korea">Расчёт авто из Кореи</string>
+    <string name="price_car_won">Стоимость авто в вонах</string>
+    <string name="rate_of_currency">rate_of_currency</string>
+    <string name="calculate_car_tax">Расчет ежегодного налога</string>
 </resources>

@@ -9,18 +9,21 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
             android:layout_margin="20dp">
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/rate_cb"
                 android:fontFamily="@font/days_one"
                 android:textSize="30sp"
-                android:textColor="@color/white" />
+                android:textColor="@color/white"/>
+
             <LinearLayout
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
@@ -92,9 +95,10 @@
                     android:textSize="18sp"
                     android:layout_weight="1"
                     android:gravity="right"
-                    android:textColor="@color/white" />
+                    android:textColor="@color/white"/>
 
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
@@ -106,7 +110,7 @@
                     android:text="@string/korea_von"
                     style="@style/commonTextStyleRates"
                     android:layout_weight="1"
-                    android:layout_gravity="left" />
+                    android:layout_gravity="left"/>
 
                 <TextView
                     android:id="@+id/tvVonRateCb"
@@ -116,7 +120,7 @@
                     android:textSize="18sp"
                     android:layout_weight="1"
                     android:gravity="right"
-                    android:textColor="@color/white" />
+                    android:textColor="@color/white"/>
 
             </LinearLayout>
 
@@ -140,7 +144,7 @@
                     android:text="@string/dollar_usa"
                     style="@style/commonTextStyleRates"
                     android:layout_weight="1"
-                    android:layout_gravity="left" />
+                    android:layout_gravity="left"/>
 
                 <TextView
                     android:id="@+id/tvDollarRateSwift"
@@ -150,7 +154,7 @@
                     android:textSize="18sp"
                     android:layout_weight="1"
                     android:gravity="right"
-                    android:textColor="@color/white" />
+                    android:textColor="@color/white"/>
 
             </LinearLayout>
 
@@ -165,8 +169,7 @@
                     android:text="@string/japan_yen"
                     style="@style/commonTextStyleRates"
                     android:layout_weight="1"
-                    android:layout_gravity="left"
-                    />
+                    android:layout_gravity="left"/>
 
                 <TextView
                     android:id="@+id/tvYenRateSwift"
@@ -176,8 +179,8 @@
                     android:textSize="18sp"
                     android:layout_weight="1"
                     android:gravity="right"
-                    android:textColor="@color/white"
-                    />
+                    android:textColor="@color/white"/>
+
             </LinearLayout>
 
             <LinearLayout

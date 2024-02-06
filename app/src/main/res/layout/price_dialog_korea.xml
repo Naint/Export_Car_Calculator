@@ -3,11 +3,11 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:backgroundTint="@color/mainBackground"
     app:cardCornerRadius="0dp"
     app:cardBackgroundColor="@color/mainBackground"
-    app:cardPreventCornerOverlap="false"
-    >
+    app:cardPreventCornerOverlap="false">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -22,52 +22,42 @@
             android:layout_height="wrap_content"
             style="@style/textStyleBase"
             android:text="@string/price_car_in_korea"
-            android:textColor="@color/white"
-            />
+            android:textColor="@color/white"/>
 
         <EditText
             android:id="@+id/carPriceInfo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:hint="900.000 ¥"
-            style="@style/textStyleBase"
-            android:enabled="false"
-            android:textColor="#CCFF33"
-            android:textColorHint="#CCFF33"
-            />
+            tools:hint="900.000 ¥"
+            style="@style/editTextStylePriceDialog"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Средние расходы по Корее:"
+            android:text="@string/average_expense_in_korea"
             android:textColor="@color/white"
             style="@style/textStyleBase"
-            android:textSize="18sp" />
+            android:textSize="18sp"/>
+
         <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:hint="200.000 ₽"
-            style="@style/textStyleBase"
-            android:textColor="@color/white"
-            android:textColorHint="@color/lightGreen"
-            />
+            tools:hint="200.000 ₽"
+            style="@style/editTextStylePriceDialog"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Средний фрахт:"
+            android:text="@string/average_freight"
             android:textColor="@color/white"
             style="@style/textStyleBase"
-            android:textSize="18sp" />
+            android:textSize="18sp"/>
+
         <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:hint="450 $"
-            style="@style/textStyleBase"
-            android:textColor="@color/white"
-            android:textColorHint="@color/lightGreen"
-
-            />
+            tools:hint="450 $"
+            style="@style/editTextStylePriceDialog"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -75,76 +65,70 @@
             android:text="@string/average_comission_company"
             style="@style/textStyleBase"
             android:textColor="@color/white"
-            android:textSize="18sp" />
+            android:textSize="18sp"/>
+
         <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:hint="50.000 ₽"
+            tools:hint="50.000 ₽"
             android:textColor="@color/white"
             style="@style/textStyleBase"
-            android:textColorHint="@color/lightGreen"
-            />
+            android:textColorHint="@color/lightGreen"/>
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Таможенный платеж:"
+            android:text="@string/custom_payment"
             style="@style/textStyleBase"
             android:textColor="@color/white"
-            android:textSize="18sp" />
+            android:textSize="18sp"/>
+
         <EditText
             android:id="@+id/customPriceED"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:hint="170.000₽"
-            style="@style/textStyleBase"
-            android:textColor="@color/lightGreen"
-            android:textColorHint="@color/lightGreen"
-            />
+            tools:hint="170.000 ₽"
+            style="@style/editTextStylePriceDialog"/>
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Средняя цена за оформление в РФ :"
+            android:text="@string/average_price_for_registration_in_ru"
             style="@style/textStyleBase"
             android:textColor="@color/white"
-            android:textSize="18sp" />
+            android:textSize="18sp"/>
+
         <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:hint="80.000 ₽"
-            style="@style/textStyleBase"
-            android:textColor="@color/white"
-            android:textColorHint="@color/lightGreen"
-            android:layout_marginBottom="25dp"
-            />
+            tools:hint="80.000 ₽"
+            style="@style/editTextStylePriceDialog"
+            android:layout_marginBottom="25dp"/>
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Итоговая стоимость:"
+            android:text="@string/final_price"
             style="@style/textStyleBase"
             android:textColor="@color/white"
-            android:textSize="24sp"
+            android:textSize="24sp"/>
 
-            />
         <EditText
             android:id="@+id/totalPriceED"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:hint="~ 1.100.000 ₽"
-            style="@style/textStyleBase"
-            android:textColor="@color/lightGreen"
-            android:textColorHint="@color/lightGreen"
-            />
+            tools:hint="~ 1.100.000 ₽"
+            style="@style/editTextStylePriceDialog"/>
 
         <Button
             android:id="@+id/closePriceDialog"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/red"
+            android:backgroundTint="@color/lightGrey"
             android:text="@string/close"
             style="@style/textStyleBase"
             android:layout_marginTop="15dp"
-            android:layout_gravity="center"
-            />
+            android:layout_gravity="center"/>
 
     </LinearLayout>
 

@@ -2,22 +2,22 @@
 <resources>
 
     <style name="textStyleBase">
-        <!--<item name="background">@drawable/edit_text_style</item>-->
-        <item name="android:textSize">22sp</item>
-        <item name="fontFamily">@font/days_one</item>
-
-    </style>
-
-    <style name="editTextStyle">
         <item name="android:textSize">22sp</item>
         <item name="fontFamily">@font/days_one</item>
     </style>
-    
-    <style name="commonTextStyleRates" parent="TextAppearance.AppCompat">
+
+    <style name="commonTextStyleRates">
         <item name="android:textSize">18sp</item>
         <item name="android:textColor">@color/white</item>
         <item name="fontFamily">@font/days_one</item>
     </style>
 
+    <style name="editTextStylePriceDialog">
+        <item name="android:textSize">22sp</item>
+        <item name="android:textColor">@color/lightGreen</item>
+        <item name="android:textColorHint">@color/lightGreen</item>
+        <item name="fontFamily">@font/days_one</item>
+        <item name="android:enabled">false</item>
+    </style>
 
 </resources>

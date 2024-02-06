@@ -12,13 +12,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="30dp"
-        android:text="Расчёт авто из Японии"
+        android:text="@string/calculate_car_from_japan"
         android:fontFamily="@font/days_one"
         android:textSize="18sp"
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -34,11 +34,11 @@
             android:id="@+id/carPriceYenET"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Стоимость авто в йенах"
+            android:hint="@string/car_price_yen"
             android:textColor="@color/white"
             android:textColorHint="@color/white"
             android:inputType="number"
-            android:fontFamily="@font/days_one" />
+            android:fontFamily="@font/days_one"/>
 
         <RadioGroup
             android:id="@+id/radioGroup"
@@ -52,13 +52,13 @@
                 android:layout_height="wrap_content"
                 android:textColor="@color/white"
                 android:fontFamily="@font/days_one"
-                android:text="Младше 3 лет" />
+                android:text="@string/less_three_years"/>
 
             <RadioButton
                 android:id="@+id/threeFromFiveRB"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="От 3 до 5 лет"
+                android:text="@string/three_to_five_years"
                 android:fontFamily="@font/days_one"
                 android:textColor="@color/white"/>
             <RadioButton
@@ -67,14 +67,14 @@
                 android:layout_height="wrap_content"
                 android:textColor="@color/white"
                 android:fontFamily="@font/days_one"
-                android:text="От 5 до 7 лет" />
+                android:text="@string/five_to_seven_years"/>
             <RadioButton
                 android:id="@+id/moreSevenRB"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/white"
                 android:fontFamily="@font/days_one"
-                android:text="Старше 7 лет" />
+                android:text="@string/more_seven"/>
         </RadioGroup>
 
         <RadioGroup
@@ -82,34 +82,29 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:layout_gravity="center"
-            android:layout_marginTop="10dp"
-            >
+            android:layout_marginTop="10dp">
 
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Физ. лицо"
+                android:text="@string/individual"
                 android:gravity="center"
                 android:fontFamily="@font/days_one"
                 android:button="@android:color/transparent"
                 android:background="@drawable/radio_selector_calc_face"
-                android:textColor="@drawable/text_color_calc_face"
-                />
-            <RadioButton
+                android:textColor="@drawable/text_color_calc_face" />
 
+            <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Юр. лицо"
+                android:text="@string/legal_entity"
                 android:button="@android:color/transparent"
                 android:gravity="center"
                 android:fontFamily="@font/days_one"
                 android:textColor="@drawable/text_color_calc_face"
-                android:background="@drawable/radio_selector_calc_face"
-                />
-
-
+                android:background="@drawable/radio_selector_calc_face" />
 
         </RadioGroup>
 
@@ -117,13 +112,13 @@
             android:id="@+id/engineCapacityED"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Объём двигателя"
+            android:hint="@string/capacity_engine"
             android:inputType="number"
             android:layout_marginTop="20dp"
             android:fontFamily="@font/days_one"
             android:textColor="@color/white"
-            android:textColorHint="@color/white"
-            />
+            android:textColorHint="@color/white"/>
+
         <Button
             android:id="@+id/calculateButton"
             android:layout_width="wrap_content"
@@ -135,8 +130,8 @@
             android:textColor="@color/white"
             android:textColorHint="@color/white"
             android:fontFamily="@font/days_one"
-            android:text="Раcсчитать"/>
-    </LinearLayout>
+            android:text="@string/calculate"/>
 
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
