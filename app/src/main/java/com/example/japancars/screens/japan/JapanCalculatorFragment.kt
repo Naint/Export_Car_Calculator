@@ -68,6 +68,8 @@ class JapanCalculatorFragment : Fragment() {
         val totalPriceEditText = customView.findViewById<EditText>(R.id.totalPriceED)
         val closeButton = customView.findViewById<Button>(R.id.closePriceDialog)
 
+
+
         /*Костыль для работы кода
         * Нужно вынести инициализацию VM вверх
         * */
@@ -120,9 +122,6 @@ class JapanCalculatorFragment : Fragment() {
         catch (_: Exception){
 
         }
-
-
-
     }
 
     fun getYearRadioButton(): Int{
@@ -139,11 +138,6 @@ class JapanCalculatorFragment : Fragment() {
         }
         return result
     }
-
-
-
-    
-
 
     companion object {
         @JvmStatic

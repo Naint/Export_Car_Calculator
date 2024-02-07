@@ -45,7 +45,7 @@
         <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            tools:hint="150.000 ¥"
+            android:hint="150.000 ¥"
             style="@style/textStyleBase"
             android:textColor="@color/white"
             android:textColorHint="@color/lightGreen"/>
@@ -61,7 +61,7 @@
         <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            tools:hint="450 $"
+            android:hint="450 $"
             style="@style/textStyleBase"
             android:textColor="@color/white"
             android:textColorHint="@color/lightGreen"/>
@@ -77,7 +77,7 @@
         <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            tools:hint="50.000 ₽"
+            android:hint="50.000 ₽"
             android:textColor="@color/white"
             style="@style/textStyleBase"
             android:textColorHint="@color/lightGreen"/>
@@ -110,7 +110,7 @@
         <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            tools:hint="80.000 ₽"
+            android:hint="80.000 ₽"
             style="@style/textStyleBase"
             android:textColor="@color/white"
             android:textColorHint="@color/lightGreen"

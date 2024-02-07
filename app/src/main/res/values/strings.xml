@@ -38,6 +38,6 @@
     <string name="legal_entity">Юр. лицо</string>
     <string name="calculate_price_from_korea">Расчёт авто из Кореи</string>
     <string name="price_car_won">Стоимость авто в вонах</string>
-    <string name="rate_of_currency">rate_of_currency</string>
-    <string name="calculate_car_tax">Расчет ежегодного налога</string>
+    <string name="rate_of_currency">Курсы валют</string>
+    <string name="calculate_car_tax">Расчёт налога на авто</string>
 </resources>

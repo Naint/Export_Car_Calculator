@@ -24,6 +24,7 @@
         android:background="@color/mainBackground"
         app:itemTextColor="@color/white"
         app:itemIconSize="30dp"
+        app:itemActiveIndicatorStyle="@color/white"
         app:itemIconTint="@drawable/item_bot_menu_selector"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

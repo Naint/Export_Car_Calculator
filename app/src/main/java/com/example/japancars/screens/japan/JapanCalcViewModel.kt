@@ -12,13 +12,13 @@ class JapanCalcViewModel(application: Application): AndroidViewModel(application
     var carPriceYenLiveData = MutableLiveData<Int>()
     var customPaymentLiveData = MutableLiveData<Double>()
 
-    private var japanExpense = 100000
-    private var averageComission = 50000
-    private var freight = 450
-    private var expenseInRussia = 80000
+    private val japanExpense = 100000
+    private val averageComission = 50000
+    private val freight = 450
+    private val expenseInRussia = 80000
 
 
-    fun init(customPayment: Double, ){
+    fun init(customPayment: Double){
         customPaymentLiveData.value = customPayment
     }
 
@@ -36,9 +36,7 @@ class JapanCalcViewModel(application: Application): AndroidViewModel(application
         var n = PhisycalCustomPayment()
 
         if(age in 0..2){
-
             price = n.calculatePaymentLessThree(carPrice, yenRate, euroRate)
-            Log.i("carPriceLiveData", price.toString())
             customPayment = price
         }
         else if (age in 3..5){
@@ -51,9 +49,7 @@ class JapanCalcViewModel(application: Application): AndroidViewModel(application
         }
 
         return price
-
     }
-
 
     private fun getRublesPrice(jpy: Int, rate : Double): Double{
         return jpy * rate
